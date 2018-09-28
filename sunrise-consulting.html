@@ -3,15 +3,21 @@
 <html>
     <head>
         <title>sunrise-consulting</title>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, inicail-scale=1.0" >
         <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css" integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO" crossorigin="anonymous">
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+        
         
         <style>
-             body {font-family: Comic Sans MS}
+             * {box-sizing:border-box}
+             body {font-family: Source Sans Pro}
             .header-container {position:relative;height:400px}
             .padding-large {padding-top:40px}
             
             .letter-spacing-s {letter-spacing: 1px}
             .letter-spacing-md {letter-spacing:4px}
+             .link-none {text-decoration: none!important}
             
             .xxsmall{font-size:12px}
             .xsmall{font-size:14px}
@@ -24,49 +30,136 @@
             .xxxlarge{font-size:50px}
             .xxxxlarge{font-size:70px}
             
-            .bgimg1{
+            .bgimg1, .bgimg2-1, .bgimg3-1{
                 min-height:100%;
-                background-image:url(sunrise-consulting-image/DRCsunrise.jpg);
                 background-size:cover;
                 background-repeat:no-repeat;
                 background-position:center;
             }
+            
+            .bgimg2, .bgimg3{
+                position: relative;
+                opacity: 0.9;
+                background-attachment: fixed;
+                background-position: center;
+                background-repeat: no-repeat;
+                background-size: cover;
+                
+            }
+            
+            .bgimg1 {
+                background-image:url(sunrise-consulting-image/DRCsunrise.jpg);
+            }
+            
+            .bgimg2, .bgimg2-1 {
+                background-image: url("sunrise-consulting-image/sunrise3.jpg");
+                min-height: 400px;
+            }
+            
+            .bgimg3, .bgimg3-1 {
+                background-image: url("sunrise-consulting-image/sunrise5.jpg");
+                min-height: 400px;
+            }
+            
+            .caption {
+                position: absolute;
+                left: 0;
+                top: 45%;
+                width: 100%;
+                text-align: center;
+            }
+            
+            .caption span.border {
+                padding: 18px;
+                font-size: 25px;
+                letter-spacing: 10px;
+            }
+            
             #fixed-logo {position:fixed;top:47%;left:1.5%;z-index: 1!important;width:50px;}
+            
+            .bg-pink-hover:hover {background-color:#ff8c66}
+            .bg-black {background-color:#ff9f80;}
+            .bg-black-hover:hover {background-color:#ff8c66;}
+            .bg-black-hover:hover button {background-color:white;color:black}
+            .card-s:hover .bg-pink-hover {background-color:#A34D6F}
+            
+            .opacity {opacity:0.9}
+            .opacity-hover:hover {opacity:0.8}
+            .opacity-lg {opacity:0.8}
+            .display-middle {position:absolute;top:35%;left:50%;transform:translate(-50%,-50%);transition: .5s ease;opacity: 0;}
+            
+            .hover-opacity-off:hover {opacity:1.0}
+            .hover-white:hover {background:white!important}
+            .hover-black:hover {color:black!important}
+            .hover-orange:hover {color:#ff9f80!important;opacity:0.6}
+            .hover-underline:hover {text-decoration: underline!important}
+            
+            .card0:hover .hover-image {opacity:0.3}
+            .card0:hover .hover-text:hover {opacity:1.0}
+            .hover-text{background-color: #333A40;color: white;font-size: 16px;padding: 16px 32px;}
+            .hover-image {opacity: 1;display: block;transition: .5s ease;backface-visibility: hidden;}
+            
+            .cursor {cursor:pointer}
+            .transition {transition:background 0.45s ease-in-out}
+            
+            .rounded-lg {border-radius:15px}
+            .rounded-b {border-radius:0 0 15px 15px}
+            .rounded-t {border-radius:15px 15px 0 0}
+            
+            .move {
+                position :relative;
+                -webkit-animation: mymove 5s; /* Safari 4.0 - 8.0 */
+                animation: mymove 6s;
+            }
+            
+            /* Safari 4.0 - 8.0 */
+            @-webkit-keyframes mymove {
+                from {top: 200px;}
+                to {top: 0px;}
+            }
+
+            /* Standard syntax */
+            @keyframes mymove {
+                from {top: 200px;}
+                to {top: 0px;}
+            }
+            #tothetop {position:fixed;bottom:20px;right:25px;text-decoration: none!important;border:1px solid #ff9f80;border-radius:4px;background-color:#ff9f80; opacity:0.7;z-index:1.0;padding-right:5px}  
+            
         </style>
     </head>
     <body>
         <img id="fixed-logo" src="sunrise-consulting-image/Sunrise_large.gif" class="d-none d-md-block rounded opacity hover-opacity-off cursor">
 <!--navbar pc-->
-        <nav class="navbar navbar-expand-md navbar-light">
+        <nav class="navbar navbar-expand-md navbar-light bg-black opacity-lg">
             <div class="container">
                 <div class="navbar-collapse collapse">
                     <ul class="navbar-nav nav-fill w-100">
                         <li class="nav-item">
-                            <a class="nav-link" href="#">E-book</a>
+                            <a class="nav-link hover-white hover-orange hover-underline rounded text-white opacity-lg" href="http://sunriseconsulting.co.uk/ebook.html">E-book</a>
                         </li>
                         <li class="nav-item">
-                            <a class="nav-link" href="//codeply.com">Adherence</a>
+                            <a class="nav-link hover-white hover-orange hover-underline rounded text-white opacity-lg" href="http://sunriseconsulting.co.uk/adherence.html">Adherence</a>
                         </li>
                         <li class="nav-item">
-                            <a class="nav-link" href="#">Intervew</a>
+                            <a class="nav-link hover-white hover-orange hover-underline rounded text-white opacity-lg" href="http://sunriseconsulting.co.uk/interview.html">Intervew</a>
                         </li>
                         <li class="nav-item">
-                            <a class="nav-link" href="#">Seminiars</a>
+                            <a class="nav-link hover-white hover-orange hover-underline rounded text-white opacity-lg" href="http://sunriseconsulting.co.uk/seminars.html">Seminiars</a>
                         </li>
                         <li class="nav-item">
-                            <a class="nav-link" href="#">Bespoke</a>
+                            <a class="nav-link hover-white hover-orange hover-underline rounded text-white opacity-lg" href="http://sunriseconsulting.co.uk/bespoke.html">Bespoke</a>
                         </li>
                         <li class="nav-item">
-                            <a class="nav-link" href="#">Peter's CV</a>
+                            <a class="nav-link hover-white hover-orange hover-underline rounded text-white opacity-lg" href="http://sunriseconsulting.co.uk/peterward.html">Peter's CV</a>
                         </li>
                         <li class="nav-item">
-                            <a class="nav-link" href="http://sunriseconsulting.blogspot.com/">Peter's Blog</a>
+                            <a class="nav-link hover-white hover-orange hover-underline rounded text-white opacity-lg" href="http://sunriseconsulting.blogspot.com/">Peter's Blog</a>
                         </li>
                         <li class="nav-item">
-                            <a class="nav-link" href="https://www.gannets.org.uk/">Holiday House</a>
+                            <a class="nav-link hover-white hover-orange hover-underline rounded text-white opacity-lg" href="https://www.gannets.org.uk/">Holiday House</a>
                         </li>
                         <li class="nav-item">
-                            <a class="nav-link" href="#">Misc Links</a>
+                            <a class="nav-link hover-white hover-orange hover-underline rounded text-white opacity-lg" href="http://sunriseconsulting.co.uk/misclinks.html">Misc Links</a>
                         </li>
                     </ul>
                 </div>
@@ -74,7 +167,7 @@
         </nav>
 <!--navbar mobile-->
         <div class="d-block d-md-none">
-            <nav class="navbar navbar-expand-md navbar-light bg-light">
+            <nav class="navbar navbar-expand-md navbar-light bg-black opacity-lg">
                 <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarTogglerDemo03" aria-controls="navbarTogglerDemo03" aria-expanded="false" aria-label="Toggle navigation">
                     <span class="navbar-toggler-icon"></span>
                 </button>
@@ -83,31 +176,31 @@
                 <div class="collapse navbar-collapse text-center" id="navbarTogglerDemo03">
                     <ul class="navbar-nav mr-auto mt-2 mt-lg-0">
                         <li class="nav-item active">
-                            <a class="nav-link" href="#">E-book <span class="sr-only">(current)</span></a>
+                            <a class="nav-link hover-white hover-orange hover-underline rounded text-white opacity-lg" href="http://sunriseconsulting.co.uk/ebook.html">E-book <span class="sr-only">(current)</span></a>
                         </li>
                         <li class="nav-item">
-                            <a class="nav-link" href="#">Adherence</a>
+                            <a class="nav-link hover-white hover-orange hover-underline rounded text-white opacity-lg" href="http://sunriseconsulting.co.uk/adherence.html">Adherence</a>
                         </li>
                         <li class="nav-item">
-                            <a class="nav-link" href="#">Intervew</a>
+                            <a class="nav-link hover-white hover-orange hover-underline rounded text-white opacity-lg" href="http://sunriseconsulting.co.uk/interview.html">Intervew</a>
                         </li>
                         <li class="nav-item">
-                            <a class="nav-link" href="#">Seminiars</a>
+                            <a class="nav-link hover-white hover-orange hover-underline rounded text-white opacity-lg" href="http://sunriseconsulting.co.uk/seminars.html">Seminiars</a>
                         </li>
                         <li class="nav-item">
-                            <a class="nav-link" href="#">Bespoke</a>
+                            <a class="nav-link hover-white hover-orange hover-underline rounded text-white opacity-lg" href="http://sunriseconsulting.co.uk/bespoke.html">Bespoke</a>
                         </li>
                         <li class="nav-item">
-                            <a class="nav-link" href="#">Peter's CV</a>
+                            <a class="nav-link hover-white hover-orange hover-underline rounded text-white opacity-lg" href="http://sunriseconsulting.co.uk/peterward.html">Peter's CV</a>
                         </li>
                         <li class="nav-item">
-                            <a class="nav-link" href="http://sunriseconsulting.blogspot.com/">Peter's Blog</a>
+                            <a class="nav-link hover-white hover-orange hover-underline rounded text-white opacity-lg" href="http://sunriseconsulting.blogspot.com/">Peter's Blog</a>
                         </li>
                         <li class="nav-item">
-                            <a class="nav-link" href="https://www.gannets.org.uk/">Holiday House</a>
+                            <a class="nav-link hover-white hover-orange hover-underline rounded text-white opacity-lg" href="https://www.gannets.org.uk/">Holiday House</a>
                         </li>
                         <li class="nav-item">
-                            <a class="nav-link" href="#">Misc Links</a>
+                            <a class="nav-link hover-white hover-orange hover-underline rounded text-white opacity-lg" href="http://sunriseconsulting.co.uk/misclinks.html">Misc Links</a>
                         </li>
                     </ul>
                 </div>
@@ -116,78 +209,325 @@
 <!--header-->
         <div class="header-container bgimg1">
             <div class="text-center">
-                <h1 class="text-danger padding-large xxxlarge letter-spacing-s d-none d-md-block">Welcome to Sunrise Consulting (UK) Ltd</h1>
+                <h1 class="text-danger padding-large xxxlarge letter-spacing-s d-none d-md-block" style="font-family: Comic Sans MS">Welcome to Sunrise Consulting (UK) Ltd</h1>
+                <h1 class="text-danger padding-large xxxlarge letter-spacing-s d-block d-md-none" style="font-family: Comic Sans MS">Welcome <br>to Sunrise Consulting</h1>
             </div>
         </div>
 <!--about-->
-        <div>
-            <div class="container text-center pt-4 pb-4">
+        <div class="pb-4">
+            <div class="container text-center pt-5 pb-4">
                 <h2 class="text-danger">ABOUT US</h2>
-                Sunrise Consulting (UK) Ltd is run by the husband-and-wife team of Peter and Judith Ward. Peter specialises in life coaching and personal development. Judith is a Landscape Architect. Both are committed Christians and bring the Christian ethos to their work.
+                <p>Sunrise Consulting (UK) Ltd is run by the husband-and-wife team of Peter and Judith Ward. Peter specialises in life coaching and personal development. Judith is a Landscape Architect. Both are committed Christians and bring the Christian ethos to their work.</p>
             </div>
             <div class="container mx-auto row pb-4 text-justify">
                 <div class="col-md-5 text-center">
-                    <img src="sunrise-consulting-image/peter_small.jpg" style="width:180px;height:230px">
+                    <img class="rounded opacity-lg hover-opacity-off cursor" src="sunrise-consulting-image/peter_small.jpg" style="width:180px;height:230px">
                 </div>
-                <div class="col-md-7 pr-md-5 pt-4 pt-md-5">
-                    Peter is in the process of updating this website to reflect his focus on adherence. This is as a result of 4 years of PhD research into adherence, and especially medicine adherence -- whether people take their medicine when they should -- at the University of Warwick. For now, please follow the link to adherence to learn more about his work and his consulting offer.
+                <div class="col-md-7 pr-md-5 pt-4 pt-md-4">
+                    <p>Peter is in the process of updating this website to reflect his focus on adherence. This is as a result of 4 years of PhD research into adherence, and especially medicine adherence -- whether people take their medicine when they should -- at the University of Warwick. He is also an Associate of BD Search and Selection interviewing for Board-level positions, a Career Coach for Chinese students through Mandarin Consulting, and is available for other bespoke consulting.As university lecturer at postgraduate level he is a Guest Lecturer at the University of Warwick (WMG) and Greenwich School of Management.</p>
                 </div>
             </div>
             <div class="container mx-auto row pb-4 text-justify">
                 <div class="col-md-5 text-center">
-                    <img src="sunrise-consulting-image/judith.jpg" style="width:180px;height:230px">
+                    <img class="rounded opacity-lg hover-opacity-off cursor" src="sunrise-consulting-image/judith.jpg" style="width:180px;height:230px">
                 </div>
                 <div class="col-md-7 pr-md-5 pt-4 pt-md-5">
-                    Judith has worked as a Landscape Architect for over 20 years. Her experience spans everything from private gardens to major inner-city regeneration projects. Click here for more details on Judith's background.
-                    She offers a range of Landscape-related services from bespoke design projects through onsite management to complete one-stop-shop solutions.
+                    <p>Judith has worked as a Landscape Architect for over 20 years. Her experience spans everything from private gardens to major inner-city regeneration projects. Click here for more details on Judith's background.
+                    She offers a range of Landscape-related services from bespoke design projects through onsite management to complete one-stop-shop solutions.</p>
                 </div>
             </div>
         </div>
 <!--service-->
-        <div>
-            <div class="container text-center pb-4">
-                <h2 class="text-danger">SERVICE</h2>
+        <div class="bgimg2 d-none d-md-block">
+            <div class="caption">
+                <span class="border border-danger rounded-lg" style="background-color:transparent;font-size:25px;color: red;">SERVICES</span>
             </div>
-            <div class="container row mx-auto text-justify">
-                <div class="col-6">
-                    <h4>Interview Coaching to<br> Students</h4>
-                    <p class="pb-2 d-none d-md-block">Peter is now offering interview coaching to students who want to be better prepared for job or Masters interviews. This can be done face to face, by phone or by Skype/WeChat videoconferencing. Please see interview coaching for more details.</p>
-                    <p class="pb-2 d-block d-md-none text-center">This is for students who want to be better prepared for job or Masters interviews. This can be done face to face, by phone or by Skype/WeChat videoconferencing.</p>
+        </div>
+        <div class="bgimg2-1 d-block d-md-none">
+            <div class="text-center">
+                 <div style="padding-top:180px"><span class="border border-danger rounded-lg" style="background-color:transparent;font-size:25px;color: red;padding: 18px;letter-spacing: 10px;">SERVICES</span>
+                 </div>
+            </div>
+        </div>
+        <div class="container pt-5 move">
+            <div class="row pb-3 pt-3">
+                <div class="card pt-2 pt-lg-0 col-6 col-lg-3 border-0 rounded">
+                    <a href="http://sunriseconsulting.co.uk/coaching.html" class="link-none"><img class="card-img-top opacity hover-opacity-off cursor rounded-t w-100" src="sunrise-consulting-image/cv-image.jpg" alt="Matthew & Ed speak"></a>
+                    <div class="card-body bg-black bg-black-hover bg-pink-hover transition opacity cursor rounded-b">
+                        <a href="http://sunriseconsulting.co.uk/coaching.html" class="link-none"><h4 class="card-title text-white">CV and Cover Letter Development</h4></a>
+                        <a href="http://sunriseconsulting.co.uk/coaching.html" class="link-none"><p class="card-text text-dark">Peter is offering personal CV and CL coaching, where he often finds that clients grow in self-confidence as well as dramatically improving their CVs and CL.</p></a>  
+                        <a href="http://sunriseconsulting.co.uk/coaching.html" class="link-none"><div class="text-center pt-5">
+                            <button class="btn btn-sm btn-danger opacity-lg font-weight-bold hover-white hover-black transition" type="submit">More Info</button>
+                            </div></a>
+                    </div>
                 </div>
-                <div class="col-6">
-                    <h4>Interview Coaching to<br>Professionals <span class="d-none d-md-block"> and Managers </span></h4>
-                    <p class="pb-2 d-none d-md-block">Peter continues to offer coaching to managers and professionals who want to be more successful. He offers what he calls Coaching Plus face to face, by phone or by Skype/WeChat videoconferencing, to make you more successful with your clients, peers and teams. In these times of incessant pressure you need to set yourself apart from the others. Peter will help you to do that!</p>
-                    <p class="pb-2 d-block d-md-none text-center">This is for managers and professionals who want to be more successful with your clients, peers and teams. Peter can help you set yourself apart from pressures.</p>
+                <div class="card pt-2 pt-lg-0 col-6 col-lg-3 border-0 rounded">
+                    <a href="http://sunriseconsulting.co.uk/interview.html" class="link-none"><img class="card-img-top opacity hover-opacity-off cursor rounded-t w-100" src="sunrise-consulting-image/students.jpg" alt="Matthew & Ed speak"></a>
+                    <div class="card-body bg-black bg-black-hover bg-pink-hover transition opacity cursor rounded-b">
+                        <a href="http://sunriseconsulting.co.uk/interview.html" class="link-none"><h4 class="card-title text-white">Interview Coaching to Students</h4></a>
+                        <a href="http://sunriseconsulting.co.uk/interview.html" class="link-none"><p class="card-text text-dark">Peter is offering interview coaching to students who want to be better prepared for job or Masters interviews. This can be done face to face, by phone or by Skype/WeChat video conferencing. </p></a>  
+                        <a href="http://sunriseconsulting.co.uk/interview.html" class="link-none"><div class="text-center pt-4">
+                            <button class="btn btn-sm btn-danger opacity-lg font-weight-bold hover-white hover-black transition" type="submit">More Info</button>
+                            </div></a>
+                    </div>
                 </div>
-                <div class="col-6">
-                    <h4><span class="d-none d-md-block">Personal Skills Seminars on Relationships, </span>Interpersonal Skills and CV Development</h4>
-                    <p class="pb-2 d-none d-md-block">Peter also delivers personal skills seminars on relationships, interpersonal skills and CV development. He can provide personal CV coaching, where he often finds that clients grow in self-confidence as well as dramatically improving their CVs.</p>
-                    <p class="pb-2 d-block d-md-none text-center">Peter can provide personal CV coaching for clients to grow in self-confidence as well as their CVs.</p>
+                <div class="card pt-2 pt-lg-0 col-6 col-lg-3 border-0 rounded">
+                    <a href="http://sunriseconsulting.co.uk/coaching.html" class="link-none"><img class="card-img-top opacity hover-opacity-off cursor rounded-t w-100" src="sunrise-consulting-image/leadership.jpg" alt="Matthew & Ed speak"></a>
+                    <div class="card-body bg-black bg-pink-hover bg-black-hover transition opacity cursor rounded-b">
+                        <a href="http://sunriseconsulting.co.uk/coaching.html" class="link-none"><h4 class="card-title text-white">Interpersonal Skills Improvement</h4></a>
+                        <a href="http://sunriseconsulting.co.uk/coaching.html" class="link-none"><p class="card-text text-dark">Peter also delivers personal skills seminars on relationships, interpersonal skills. He is an experienced mentor and coach and has spent many years providing personal skills leadership.</p></a>  
+                        <a href="http://sunriseconsulting.co.uk/coaching.html" class="link-none"><div class="text-center pt-4">
+                            <button class="btn btn-sm btn-danger opacity-lg font-weight-bold hover-white hover-black transition" type="submit">More Info</button>
+                            </div></a>
+                    </div>
                 </div>
-                <div class="col-6">
-                    <h4>Personal Skills Leadership</h4>
-                    <p class="pb-2 pt-md-2 d-none d-md-block">Peter is an experienced mentor and coach and has spent many years providing personal skills leadership. Click here for more details on Peter's background and skills. One part of his mentoring is interview coaching, which he primaarily offers to students who wish to prepare effectively for job and university interviews.</p>
-                    <p class="pb-2 pt-md-2 d-block d-md-none text-center">Peter is an experienced mentor and coach and has spent many years providing personal skills leadership. </p>
+                <div class="card pt-2 pt-lg-0 col-6 col-lg-3 border-0 rounded">
+                    <a href="http://sunriseconsulting.co.uk/coaching.html" class="link-none"><img class="card-img-top opacity hover-opacity-off cursor rounded-t w-100" src="sunrise-consulting-image/professtionals.jpg" alt="Matthew & Ed speak"></a>
+                    <div class="card-body bg-black bg-pink-hover bg-black-hover transition opacity cursor rounded-b">
+                        <a href="http://sunriseconsulting.co.uk/coaching.html" class="link-none"><h4 class="card-title text-white">Business Coaching to Professionals and Managers</h4></a>
+                        <a href="http://sunriseconsulting.co.uk/coaching.html" class="link-none"><p class="card-text text-dark">Peter is offering coaching to managers and professionals who want to be more successful with your clients, peers and teams. He will help you to set yourself apart from the others in these times of incessant pressure!</p></a>  
+                        <a href="http://sunriseconsulting.co.uk/coaching.html" class="link-none"><div class="text-center pt-0">
+                            <button class="btn btn-sm btn-danger opacity-lg font-weight-bold hover-white hover-black transition" type="submit">More Info</button>
+                            </div></a>
+                    </div>
                 </div>
-                <div class="col-12">
-                    <p class="pb-2">He is also an Associate of BD Search and Selection interviewing for Board-level positions, a Career Coach for Chinese students through Mandarin Consulting, and is available for other bespoke consulting. As university lecturer at postgraduate level he is a Guest Lecturer at the University of Warwick (WMG) and Greenwich School of Management.</p>
+            </div>
+        </div>
+        <div class="container move">
+            <div class="row pb-3">
+                <div class="card col-12 col-lg-6 border-0 card0">
+                    <a href="http://sunriseconsulting.co.uk/adherence.html" class="link-none"><img class="cursor hover-image rounded-t w-100" src="sunrise-consulting-image/ma.png" alt="gig"></a>
+                    <a href="http://sunriseconsulting.co.uk/adherence.html" class="link-none"><div class="display-middle hover-text rounded">
+                        <div>ADHERENCE</div>
+                        </div></a>
+                    <div class="card-body bg-black bg-black-hover transition opacity hover-opacity-off cursor rounded-b">
+                        <a href="http://sunriseconsulting.co.uk/adherence.html" class="link-none"><h5 class="card-title text-white">What is Adherence?</h5></a>
+                        <a href="http://sunriseconsulting.co.uk/adherence.html" class="link-none"><p class="text-dark">Adherence refers to whether people behave according to the instructions or norms which relate to what they are asked to do. For example, do you adhere to law of the speed limit, the norm of queuing in supermarkets, or the prescription for taking medicines?</p></a>
+                    </div>
                 </div>
-                <div class="col-12">
-                    <p class="pb-2">Why not give us a call?
-                    Contact us to arrange a Coaching Plus session, enquire about some landscape work, or generally to discuss your requirements. We're always ready to talk about how we can help you. If you don't find what you need in the standard offerings, then contact us for a bespoke solution to your needs. We're ready to help you!</p>
+                <div class="card-s card col-12 col-lg-6 pt-3 pt-lg-0 border-0">
+                    <a href="https://www.gannets.org.uk/">
+                        <div id="carouselExampleIndicators" class="carousel slide" data-ride="carousel">
+                            <div class="carousel-inner">
+                                <div class="carousel-item active">
+                                    <img class="card-img-top opacity hover-opacity-off cursor w-100 rounded-t"  src="sunrise-consulting-image/holiday-1.png" alt="First slide">
+                                    <div class="carousel-caption d-none d-md-block">
+                                        <h5>Nice Holiday House</h5>
+                                    </div>
+                                </div>
+                                <div class="carousel-item">
+                                    <img class="card-img-top opacity hover-opacity-off cursor w-100 rounded-t"  src="sunrise-consulting-image/holiday-5.png" alt="Second slide">
+                                    <div class="carousel-caption d-none d-md-block">
+                                        <h5>Garden</h5>
+                                    </div>
+                                </div>
+                                <div class="carousel-item">
+                                    <img class="card-img-top opacity hover-opacity-off cursor w-100 rounded-t"  src="sunrise-consulting-image/holiday-2.png" alt="Third slide">
+                                    <div class="carousel-caption d-none d-md-block">
+                                        <h5>Living Room</h5>
+                                    </div>
+                                </div>
+                                <div class="carousel-item">
+                                    <img class="card-img-top opacity hover-opacity-off cursor w-100 rounded-t"  src="sunrise-consulting-image/holiday-3.png" alt="Second slide">
+                                    <div class="carousel-caption d-none d-md-block">
+                                        <h5>Living Room</h5>
+                                    </div>
+                                </div>
+                                <div class="carousel-item">
+                                    <img class="card-img-top opacity hover-opacity-off cursor w-100 rounded-t"  src="sunrise-consulting-image/holiday-6.png" alt="Third slide">
+                                    <div class="carousel-caption d-none d-md-block">
+                                        <h5>Bedroom</h5>
+                                    </div>
+                                </div>
+                                <div class="carousel-item">
+                                    <img class="card-img-top opacity hover-opacity-off cursor w-100 rounded-t"  src="sunrise-consulting-image/holiday-4.png" alt="Third slide">
+                                    <div class="carousel-caption d-none d-md-block">
+                                        <h5>House</h5>
+                                    </div>
+                                </div>
+                            </div>
+                            <a class="carousel-control-prev" href="#carouselExampleIndicators" role="button" data-slide="prev">
+                                <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                                <span class="sr-only">Previous</span>
+                            </a>
+                            <a class="carousel-control-next" href="#carouselExampleIndicators" role="button" data-slide="next">
+                                <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                                <span class="sr-only">Next</span>
+                            </a>
+                        </div>
+                    </a>
+                    <div class="card-body bg-black bg-black-hover transition opacity hover-opacity-off cursor rounded-b">
+                        <a href="https://www.gannets.org.uk/" class="link-none"><h5 class="card-title text-white">Contemporary Holiday House - Gannets</h5></a>
+                        <a href="https://www.gannets.org.uk/" class="link-none"><p class="text-dark">Gannets is a two bedroom holiday house set in the beautiful village of Salthouse, Norfolk. Salthouse is a conservation village on the North Coast of Norfolk which is an Area of Outstanding Natural Beauty.</p></a>
+                    </div>
                 </div>
-                <div class="col-12">
-                    <p class="pb-2">
-                    A personal note from Peter: Would you like a copy of my very popular ebook How to Survive and Thrive! at Work? I've sent out over 100 copies and have 100% satisfied customers! It's available at only £4.99 via this link.
-                    </p>
+            </div>
+        </div>
+        <div class="container move">
+            <div class="row pb-3 pt-0">
+                <div class="card pt-2 pt-lg-0 col-6 col-lg-3 border-0 rounded">
+                    <a href="http://sunriseconsulting.co.uk/seminars.html" class="link-none"><img class="card-img-top opacity hover-opacity-off cursor rounded-t w-100" src="sunrise-consulting-image/seminar.jpg" alt="Matthew & Ed speak"></a>
+                    <div class="card-body bg-black bg-black-hover bg-pink-hover transition opacity cursor rounded-b">
+                        <a href="http://sunriseconsulting.co.uk/seminars.html" class="link-none"><h4 class="card-title text-white">Seminars</h4></a>
+                        <a href="http://sunriseconsulting.co.uk/seminars.html" class="link-none"><p class="card-text text-dark">Peter also delivers personal skills seminars on relationships, interpersonal skills and CV development. </p></a>  
+                        <a href="http://sunriseconsulting.co.uk/seminars.html" class="link-none"><div class="text-center pt-5">
+                            <button class="btn btn-sm btn-danger opacity-lg font-weight-bold hover-white hover-black transition" type="submit">More Info</button>
+                            </div></a>
+                    </div>
+                </div>
+                <div class="card pt-2 pt-lg-0 col-6 col-lg-3 border-0 rounded">
+                    <a href="http://sunriseconsulting.blogspot.com/" class="link-none"><img class="card-img-top opacity hover-opacity-off cursor rounded-t w-100" src="sunrise-consulting-image/blog.jpeg" alt="Matthew & Ed speak"></a>
+                    <div class="card-body bg-black bg-black-hover bg-pink-hover transition opacity cursor rounded-b">
+                        <a href="http://sunriseconsulting.blogspot.com/" class="link-none"><h4 class="card-title text-white">Peter's Blog</h4></a>
+                        <a href="http://sunriseconsulting.blogspot.com/" class="link-none"><p class="card-text text-dark">Peter is sharing all his experience. Check his blog for more details.</p> </a> 
+                        <a href="http://sunriseconsulting.blogspot.com/" class="link-none"><div class="text-center pt-4">
+                            <button class="btn btn-sm btn-danger opacity-lg font-weight-bold hover-white hover-black transition" type="submit">More Info</button>
+                            </div></a>
+                    </div>
+                </div>
+                <div class="card pt-2 pt-lg-0 col-6 col-lg-3 border-0 rounded">
+                    <a href="http://sunriseconsulting.co.uk/ebook.html" class="link-none"><img class="card-img-top opacity hover-opacity-off cursor rounded-t w-100" src="sunrise-consulting-image/e-book.jpg" alt="Matthew & Ed speak"></a>
+                    <div class="card-body bg-black bg-pink-hover bg-black-hover transition opacity cursor rounded-b">
+                        <a href="http://sunriseconsulting.co.uk/ebook.html" class="link-none"><h4 class="card-title text-white">How to Survive and Thrive! at Work</h4></a>
+                        <a href="http://sunriseconsulting.co.uk/ebook.html" class="link-none"><p class="card-text text-dark">Peters ebook is to all who asked for it. 100% positive! 100% of those who responded said that it was of high value and had helped them to move forward.</p></a>  
+                        <a href="http://sunriseconsulting.co.uk/ebook.html" class="link-none"><div class="text-center pt-4">
+                            <button class="btn btn-sm btn-danger opacity-lg font-weight-bold hover-white hover-black transition" type="submit">More Info</button>
+                            </div></a>
+                    </div>
+                </div>
+                <div class="card pt-2 pt-lg-0 col-6 col-lg-3 border-0 rounded">
+                    <a href="http://sunriseconsulting.co.uk/misclinks.html" class="link-none"><img class="card-img-top opacity hover-opacity-off cursor rounded-t w-100" src="sunrise-consulting-image/useful-information-2.jpg" alt="Matthew & Ed speak"></a>
+                    <div class="card-body bg-black bg-pink-hover bg-black-hover transition opacity cursor rounded-b">
+                        <a href="http://sunriseconsulting.co.uk/misclinks.html" class="link-none"><h4 class="card-title text-white">Other information</h4></a>
+                        <a href="http://sunriseconsulting.co.uk/misclinks.html" class="link-none"><p class="card-text text-dark">Know more about Peter!</p></a>  
+                        <a href="http://sunriseconsulting.co.uk/misclinks.html" class="link-none"><div class="text-center pt-0">
+                            <button class="btn btn-sm btn-danger opacity-lg font-weight-bold hover-white hover-black transition" type="submit">More Info</button>
+                            </div></a>
+                    </div>
                 </div>
             </div>
         </div>
         
+<!--contact form--> 
+        <div class="bgimg3 mt-5 mb-5 d-none d-md-block">
+            <div class="caption">
+                <span class="border border-danger rounded-lg" style="background-color:transparent;font-size:25px;color: red;">CONTACT</span>
+            </div>
+        </div>
+        <div class="bgimg3-1 d-block d-md-none">
+            <div class="text-center">
+                 <div style="padding-top:180px"><span class="border border-danger rounded-lg" style="background-color:transparent;font-size:25px;color: red;padding: 18px;letter-spacing: 10px;">CONTACT</span>
+                 </div>
+            </div>
+        </div>
+        <div class="container">
+            <div class="row">
+                <!--Add Google Map-->
+                <div class="col-md-6 mx-auto pb-5"> 
+                    <div class="row text-center pt-3 pb-3">
+                        <div class="col-md-12">
+                            <i class="fa fa-phone fa-fw hover-text-black large mr-1"></i> 
+                            Phone:019268 54115
+                        </div>
+                        <div class="col-md-12">
+                            <i class="fa fa-envelope fa-fw hover-text-black large mr-1"></i>         
+                            Email:enquiries@sunriseconsulting.co.uk
+                        </div>
+                        <div class="col-12">
+                            <i class="fa fa-map-marker fa-fw grey hover-text-black large mr-1"></i> 
+                            20 Waller Close, Leek Wootton, Warwick, CV35 7QG 
+                        </div>
+                    </div>
+                    <div id="googleMap" class="rounded" style="width:100%;height:240px"></div>
+                </div>
+                <div class="col-md-6 mx-auto m-4">
+                    <h3 class="text-center">Book A Coaching Plus Session</h3>
+                    <form class="mt-5 p-3 border rounded">    
+                        <div class="form-row">
+                            <div class="col-md-4 mb-3">
+                                <label for="validationTooltip01">First name</label>
+                                <input type="text" class="form-control" id="validationTooltip01" placeholder="First name" value="Mark" required>
+                                <div class="valid-tooltip">
+                                    Looks good!
+                                </div>
+                            </div>
+                            <div class="col-md-4 mb-3">
+                                <label for="validationTooltip02">Last name</label>
+                                <input type="text" class="form-control" id="validationTooltip02" placeholder="Last name" value="Otto" required>
+                                <div class="valid-tooltip">
+                                    Looks good!
+                                </div>
+                            </div>
+                            <div class="col-md-4 mb-3">
+                                <label for="validationTooltipUsername">Email</label>
+                                <div class="input-group">
+                                    <input type="email" class="form-control" id="validationTooltipUsername" placeholder="Email" aria-describedby="validationTooltipUsernamePrepend" required>
+                                    <div class="invalid-tooltip">
+                                        Please choose a unique and valid username.
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="form-row">
+                            <div class="col-md-6 mb-3">
+                                <label for="validationTooltip03">City</label>
+                                <input type="text" class="form-control" id="validationTooltip03" placeholder="City" required>
+                                <div class="invalid-tooltip">
+                                    Please provide a valid city.
+                                </div>
+                            </div>
+                            <div class="col-md-3 mb-3">
+                                <label for="validationTooltip04">State</label>
+                                <input type="text" class="form-control" id="validationTooltip04" placeholder="State" required>
+                                <div class="invalid-tooltip">
+                                    Please provide a valid state.
+                                </div>
+                            </div>
+                            <div class="col-md-3 mb-3">
+                                <label for="validationTooltip05">Zip</label>
+                                <input type="text" class="form-control" id="validationTooltip05" placeholder="Zip" required>
+                                <div class="invalid-tooltip">
+                                    Please provide a valid zip.
+                                </div>
+                            </div>
+                        </div>
+                        <div class="text-center">
+                        <button class="btn btn-sm btn-danger opacity-lg font-weight-bold hover-white hover-black transition" type="submit"><i class="fa fa-paper-plane"></i> Send Message</button>
+                        </div>
+                    </form>
+                </div>
+            </div>  
+        </div>
+<!--footer-->
+        <div class="bg-black opacity-lg hover-opacity-off" style="height:260px">
+            <div class="pt-md-5">
+                <p class="text-center text-white pt-5 opacity-lg">	
+                    Send mail to webmaster@sunriseconsulting.co.uk with questions or comments about this web site.
+                    <br>Copyright © 2002-2017 Sunrise Consulting (UK) Ltd. All rights reserved.
+                </p>
+                <p class="text-center text-white xsmall opacity-lg">Sunrise Consulting (UK) Ltd, registered in England, company number 4518912</p>
+            </div>
+        </div>
+        <div id="tothetop">
+        
+            <a href="#"><i class="fa fa-arrow-up"></i>Top</a>
+            
+        </div>
+        <script type="text/javascript">
+        function myMap() {
+                var myCenter = new google.maps.LatLng(52.320316, -1.579834);
+                var mapCanvas = document.getElementById("googleMap");
+                var mapOptions = {center: myCenter, zoom: 7};
+                var map = new google.maps.Map(mapCanvas, mapOptions);
+                var marker = new google.maps.Marker({position:myCenter});
+                    marker.setMap(map);
+                    }
+        
+        </script>
         <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
         <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js" integrity="sha384-ZMP7rVo3mIykV+2+9J3UJ46jBk0WLaUAdn689aCwoqbBJiSnjAK/l8WvCWPIPm49" crossorigin="anonymous"></script>
         <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/js/bootstrap.min.js" integrity="sha384-ChfqqxuZUCnJSK3+MXmPNIyE6ZbWh2IMqE241rYiqJxyMiZ6OW/JmZQ5stwEULTy" crossorigin="anonymous"></script>
-        
+        <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyD-oVVXWTgjpaTyPrOWDh32VnOqGXQUhE8&callback=myMap"></script>
     </body>
     
 </html>
